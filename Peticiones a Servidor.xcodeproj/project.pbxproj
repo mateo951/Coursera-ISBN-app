@@ -12,6 +12,7 @@
 		A2CC44931C028CA900DEC476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CC44911C028CA900DEC476 /* Main.storyboard */; };
 		A2CC44951C028CA900DEC476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2CC44941C028CA900DEC476 /* Assets.xcassets */; };
 		A2CC44981C028CA900DEC476 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CC44961C028CA900DEC476 /* LaunchScreen.storyboard */; };
+		A2CC44A01C02971B00DEC476 /* Book Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2CC449F1C02971B00DEC476 /* Book Background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A2CC44941C028CA900DEC476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2CC44971C028CA900DEC476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2CC44991C028CA900DEC476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2CC449F1C02971B00DEC476 /* Book Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Book Background.jpg"; path = "../../../../../../../Downloads/Book Background.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				A2CC44941C028CA900DEC476 /* Assets.xcassets */,
 				A2CC44961C028CA900DEC476 /* LaunchScreen.storyboard */,
 				A2CC44991C028CA900DEC476 /* Info.plist */,
+				A2CC449F1C02971B00DEC476 /* Book Background.jpg */,
 			);
 			path = "Peticiones a Servidor";
 			sourceTree = "<group>";
@@ -124,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2CC44981C028CA900DEC476 /* LaunchScreen.storyboard in Resources */,
+				A2CC44A01C02971B00DEC476 /* Book Background.jpg in Resources */,
 				A2CC44951C028CA900DEC476 /* Assets.xcassets in Resources */,
 				A2CC44931C028CA900DEC476 /* Main.storyboard in Resources */,
 			);

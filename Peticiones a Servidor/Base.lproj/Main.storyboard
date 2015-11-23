@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Peticiones_a_Servidor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,170 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Book Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8UY-Dw-htt">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Busca tu Libro!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVB-b3-oIf">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="SKG-RU-tu9"/>
+                                    <constraint firstAttribute="width" constant="291" id="mDR-jM-p8K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SKG-RU-tu9"/>
+                                        <exclude reference="mDR-jM-p8K"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="SKG-RU-tu9"/>
+                                        <include reference="mDR-jM-p8K"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Introduzca su ISNB" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="fWk-va-8HB">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="M4k-FS-CdS"/>
+                                    <constraint firstAttribute="width" constant="170" id="dxK-bs-2vL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="search"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="M4k-FS-CdS"/>
+                                        <exclude reference="dxK-bs-2vL"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="M4k-FS-CdS"/>
+                                        <include reference="dxK-bs-2vL"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="usuarioTexto:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="brh-8m-Vnh"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Rq2-Hw-p5h">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="143" id="5No-in-0FH">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="170"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="240" id="Zzr-Lu-kdd"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5No-in-0FH"/>
+                                        <exclude reference="Zzr-Lu-kdd"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5No-in-0FH"/>
+                                        <include reference="Zzr-Lu-kdd"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bcg-5j-zZ9">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="365" id="E0o-Di-vSC"/>
+                                    <constraint firstAttribute="height" constant="21" id="r8u-JF-MyJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="E0o-Di-vSC"/>
+                                        <exclude reference="r8u-JF-MyJ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="E0o-Di-vSC"/>
+                                        <include reference="r8u-JF-MyJ"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bcg-5j-zZ9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2hr-4w-g1T"/>
+                            <constraint firstItem="ZVB-b3-oIf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="41" id="CeS-9v-PVM"/>
+                            <constraint firstItem="fWk-va-8HB" firstAttribute="top" secondItem="ZVB-b3-oIf" secondAttribute="bottom" constant="64" id="FVU-T3-rDo">
+                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                            </constraint>
+                            <constraint firstItem="Rq2-Hw-p5h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q3f-az-bEb"/>
+                            <constraint firstItem="Rq2-Hw-p5h" firstAttribute="top" secondItem="fWk-va-8HB" secondAttribute="bottom" constant="50" id="b43-AK-0t7"/>
+                            <constraint firstItem="ZVB-b3-oIf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j0A-FK-ZGM"/>
+                            <constraint firstItem="fWk-va-8HB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rut-86-4ne"/>
+                            <constraint firstItem="Bcg-5j-zZ9" firstAttribute="top" secondItem="fWk-va-8HB" secondAttribute="bottom" constant="14" id="xcv-gN-8fL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="8UY-Dw-htt"/>
+                                <exclude reference="ZVB-b3-oIf"/>
+                                <exclude reference="fWk-va-8HB"/>
+                                <exclude reference="Rq2-Hw-p5h"/>
+                                <exclude reference="Bcg-5j-zZ9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="CeS-9v-PVM"/>
+                                <exclude reference="j0A-FK-ZGM"/>
+                                <exclude reference="FVU-T3-rDo"/>
+                                <exclude reference="rut-86-4ne"/>
+                                <exclude reference="2hr-4w-g1T"/>
+                                <exclude reference="xcv-gN-8fL"/>
+                                <exclude reference="Q3f-az-bEb"/>
+                                <exclude reference="b43-AK-0t7"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="8UY-Dw-htt"/>
+                                <include reference="ZVB-b3-oIf"/>
+                                <include reference="fWk-va-8HB"/>
+                                <include reference="Rq2-Hw-p5h"/>
+                                <include reference="Bcg-5j-zZ9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="CeS-9v-PVM"/>
+                                <include reference="j0A-FK-ZGM"/>
+                                <include reference="FVU-T3-rDo"/>
+                                <include reference="rut-86-4ne"/>
+                                <include reference="2hr-4w-g1T"/>
+                                <include reference="xcv-gN-8fL"/>
+                                <include reference="Q3f-az-bEb"/>
+                                <include reference="b43-AK-0t7"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="errorLabel" destination="Bcg-5j-zZ9" id="fxC-l2-RIJ"/>
+                        <outlet property="textField" destination="fWk-va-8HB" id="GX4-nm-PvE"/>
+                        <outlet property="textView" destination="Rq2-Hw-p5h" id="tpe-wj-SMa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="244.5" y="269.25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Book Background.jpg" width="2000" height="1000"/>
+    </resources>
 </document>
