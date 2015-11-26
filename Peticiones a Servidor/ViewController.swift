@@ -17,9 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
    
     @IBAction func usuarioTexto(sender: AnyObject) {
-        
-        var wasSuccesful = false
-        
+       
         let attemptedUrl = NSURL(string: "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:" + textField.text! + "")
         
         // Downloading the web content from the url
@@ -30,25 +28,24 @@ class ViewController: UIViewController {
                 
                 if let urlContent = data {
                     
-                    let webContent =  NSString(data: urlContent, encoding: NSUTF8StringEncoding)!
+                    let webContent =  NSString(data: urlContent, encoding: NSUTF8StringEncoding)! as String
                     
-                    print(webContent)
-                    
-                    //  (UserInterface) Dispatch to fast reaction
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        
-                        wasSuccesful = true
-                        
-                       self.textView.text = webContent as String
-                    })
-
-                    if wasSuccesful == false {
-                        
-                    // Error if the city does not exist or the procces failed
-                        
+                    if webContent.containsString("{}"){
                         dispatch_async(dispatch_get_main_queue(), { () -> Void in
                             
+                            // Error if the city does not exist or the procces failed
                             self.errorLabel.text = "No se encontro el libro! Intentalo de nuevo."
+                            self.errorLabel.textColor = UIColor.orangeColor()
+                            
+                        })
+                        
+                    } else {
+                        
+                        //  (UserInterface) Dispatch to fast reaction
+                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                            
+                            self.textView.text = webContent as String
+                            print(webContent)
                             
                         })
                     }
@@ -60,6 +57,7 @@ class ViewController: UIViewController {
         } else {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.errorLabel.text = "Por favor ingresa un ISBN valido."
+                 self.errorLabel.textColor = UIColor.orangeColor()
             })
         }
     }

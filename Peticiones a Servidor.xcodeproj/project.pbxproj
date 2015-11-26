@@ -23,7 +23,7 @@
 		A2CC44941C028CA900DEC476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2CC44971C028CA900DEC476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2CC44991C028CA900DEC476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2CC449F1C02971B00DEC476 /* Book Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Book Background.jpg"; path = "../../../../../../../Downloads/Book Background.jpg"; sourceTree = "<group>"; };
+		A2CC449F1C02971B00DEC476 /* Book Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Book Background.jpg"; path = "../../../../../../Assets/Book Background.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +291,7 @@
 				A2CC449E1C028CA900DEC476 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
